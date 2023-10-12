@@ -8,7 +8,7 @@ exports.findAll = async(req, res) => {
     res.status(200).json({ status: true, data: result });
     console.log('Success in finding all posts');
   } catch(error) {
-    res.status(400).json({ status: true, data: error });
+    res.status(400).json({ status: false, data: error });
     console.log('Problem in finding all posts');
   }
 };
@@ -22,7 +22,7 @@ exports.findOne = async(req, res) => {
     res.status(200).json({ status: true, data: result });
     console.log('Success in finding post');
   } catch(error) {
-    res.status(400).json({ status: true, data: error });
+    res.status(400).json({ status: false, data: error });
     console.log('Problem in finding post');
   }
 };
@@ -36,7 +36,7 @@ exports.create = async(req, res) => {
     res.status(200).json({ status: true, data: result });
     console.log('Success in saving post');
   } catch(error) {
-    res.status(400).json({ status: true, data: error });
+    res.status(400).json({ status: false, data: error });
     console.log('Problem in saving post');
   }
 };
@@ -50,7 +50,7 @@ exports.updatePost = async(req, res) => {
     res.status(200).json({ status: true, data: result });
     console.log('Success in updating post');
   } catch(error) {
-    res.status(400).json({ status: true, data: error });
+    res.status(400).json({ status: false, data: error });
     console.log('Problem in updating post');
   }
 };
@@ -64,7 +64,7 @@ exports.updateCategory = async(req, res) => {
     res.status(200).json({ status: true, data: result });
     console.log('Success in updating post category');
   } catch(error) {
-    res.status(400).json({ status: true, data: error });
+    res.status(400).json({ status: false, data: error });
     console.log('Problem in updating post category');
   }
 };
@@ -78,7 +78,7 @@ exports.deletePost = async(req, res) => {
     res.status(200).json({ status: true, data: result });
     console.log('Success in deleting post');
   } catch(error) {
-    res.status(400).json({ status: true, data: error });
+    res.status(400).json({ status: false, data: error });
     console.log('Problem in deleting post');
   }
 };
@@ -92,7 +92,7 @@ exports.deleteCategory = async(req, res) => {
     res.status(200).json({ status: true, data: result });
     console.log('Success in deleting category');
   } catch(error) {
-    res.status(400).json({ status: true, data: error });
+    res.status(400).json({ status: false, data: error });
     console.log('Problem in deleting category');
   }
 };
